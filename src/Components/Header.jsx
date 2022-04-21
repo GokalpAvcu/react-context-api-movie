@@ -1,13 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <header>
       <div className="container">
         <div className="innercontent">
-            <div className="brand">İzlenecekler</div>
+            <div className="brand">
+              <Link to={"/"}>İzlenecekler</Link>
+              </div>
             <ul className="nav-links">
-                <li>İzlenenler</li>
+                <Link to={"/watched"}>İzlenenler</Link>
                 <li>
                   <i className="fas fa-plus"></i>
                 </li>
