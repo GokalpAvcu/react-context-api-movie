@@ -5,15 +5,17 @@ const Header = () => {
   return (
     <header>
       <div className="container">
-        <div className="innercontent">
-            <div className="brand">
-              <Link to={"/"}>İzlenecekler</Link>
-              </div>
+        <div className="inner-content">
+          <div className="brand">
+            <Link to={"/"}>İzlenecekler</Link>
+          </div>
             <ul className="nav-links">
-                <Link to={"/watched"}>İzlenenler</Link>
-                <li>
+              <Link to={"/watched"} className="izlenenler">İzlenenler</Link>
+              <li>
+                <Link to={"/add"}>
                   <i className="fas fa-plus"></i>
-                </li>
+                </Link>
+              </li>
             </ul>
         </div>
       </div>

@@ -2,7 +2,7 @@
 
 :root {
   --primary: #032541;
-  --secondary: #00A0CF;
+  --secondary: #00a0cf;
   --white: #fff;
 }
 
@@ -96,6 +96,7 @@ header a:hover {
 }
 
 header .brand a {
+  width: 200px;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -110,7 +111,7 @@ header .nav-links {
 
 header .nav-links li {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 200px;
 }
 
 header .nav-links li a {
@@ -129,14 +130,14 @@ header .nav-links li:last-child {
   position: relative;
 }
 
-.add-content>img {
+.add-content > img {
   position: absolute;
   top: 0;
   left: 0;
   width: 1140px;
 }
 
-.add-content>.titles {
+.add-content > .titles {
   position: absolute;
   color: #fff;
   width: 80%;
@@ -328,7 +329,6 @@ header .nav-links li:last-child {
   opacity: 1;
 }
 
-
 .ctrl-btn {
   color: #fefefe;
   background-color: var(--primary);
@@ -349,4 +349,9 @@ header .nav-links li:last-child {
   color: #c4c4c4;
   font-size: 3rem;
   text-align: center;
+}
+
+.izlenenler {
+  position: relative;
+  right: 25px;
 }
