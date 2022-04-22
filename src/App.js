@@ -6,20 +6,20 @@ import Watchlist from "./Components/Watchlist";
 import Watched from "./Components/Watched";
 import ResultCart from "./Components/ResultCart";
 import Add from "./Components/Add";
+import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider>
       <Router>
         <Header />
         <Routes>
           <Route path="/" element={<Watchlist />} />
           <Route path="/watched" element={<Watched />} />
           <Route path="/add" element={<Add />} />
-
         </Routes>
       </Router>
-    </div>
+    </GlobalProvider>
   );
 }
 

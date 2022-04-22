@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { GlobalContext } from "../context/GlobalState";
 import ResultCart from "./ResultCart";
 
 const Add = () => {
+  const {Gokalp} = useContext(GlobalContext)
   const [query, setQuery] = useState(""); // query useState'ini kullandık (e) input'un bir özelliği
   const [results, setResults] = useState([]);
 
@@ -36,6 +38,7 @@ const Add = () => {
               Milyonlarca film, TV şovu, yerli ve yabancı 10.000 saatten fazla
               içerik ayda sadece ₺15.90 Şimdi keşfedin.
             </h2>
+            <h1>{Gokalp}</h1>
           </div>
           <div className="input-wrapper">
             <input
