@@ -4,6 +4,7 @@ import "./lib/fontawesome/css/all.min.css";
 import Header from "./Components/Header.jsx";
 import Watchlist from "./Components/Watchlist";
 import Watched from "./Components/Watched";
+import ResultCart from "./Components/ResultCart";
 import Add from "./Components/Add";
 
 function App() {
