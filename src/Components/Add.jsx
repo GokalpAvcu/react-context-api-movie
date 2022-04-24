@@ -38,7 +38,6 @@ const Add = () => {
               Milyonlarca film, TV şovu, yerli ve yabancı 10.000 saatten fazla
               içerik ayda sadece ₺15.90 Şimdi keşfedin.
             </h2>
-            <h1>{Gokalp}</h1>
           </div>
           <div className="input-wrapper">
             <input
