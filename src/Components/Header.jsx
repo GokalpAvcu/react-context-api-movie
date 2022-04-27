@@ -9,10 +9,11 @@ const Header = () => {
           <div className="brand">
             <Link to={"/"}>İzlenecekler</Link>
           </div>
+
           <ul className="nav-links">
-            <Link to={"/watched"} className="izlenenler">
-              İzlenenler
-            </Link>
+            <li>
+              <Link to={"/watched"}>İzlenenler</Link>
+            </li>
             <li>
               <Link to={"/add"} className="btn">
                 <i className="fas fa-plus"></i>
