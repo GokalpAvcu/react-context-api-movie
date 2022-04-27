@@ -6,6 +6,8 @@ import Watchlist from "./Components/Watchlist";
 import Watched from "./Components/Watched";
 import ResultCart from "./Components/ResultCart";
 import Add from "./Components/Add";
+import MovieCard from "./Components/MovieCard";
+import MovieControls from "./Components/MovieControls";
 import { GlobalProvider } from "./context/GlobalState";
 
 function App() {

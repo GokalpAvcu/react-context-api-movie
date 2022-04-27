@@ -1,57 +1,32 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
+import MovieCard from "./MovieCard";
 
-const ResultCart = ({ movie }) => {
-  const { watchlist, watched, addMovieToWatchlist, addMovieToWatched } =
-    useContext(GlobalContext);
-
-  const storedMovieWatched = watched.find((o) => o.id === movie.id);
-  const storedMovie = watchlist.find((o) => o.id === movie.id)
-    ? true
-    : !!storedMovieWatched;
+const Watchlist = () => {
+  const { watchlist } = useContext(GlobalContext);
   return (
-    <div className="result-card">
-      <div className="poster-wrapper">
-        {movie.poster_path ? (
-          <img
-            src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
-            alt={`${movie.poster_path}`}
-          />
-        ) : (
-          <div className="filler-poster"></div>
-        )}
-      </div>
-
-      <div className="info">
+    <div className="movie-page">
+      <div className="container">
         <div className="header">
-          <h3 className="title">{movie.title}</h3>
-          <h4 className="release-date">
-            {movie.release_date ? movie.release_date.substring(0, 4) : "-"}
-          </h4>
-          <h4 className="release-date">
-            IMDB: <b>{movie.vote_average ? movie.vote_average : "-"}</b>
-          </h4>
+          <h1 className="heading">İzlenecek Filmler</h1>
+
+          <div className="count-pill">
+            {watchlist.length} {watchlist.length < 2 ? "Movie" : "Movies"}
+          </div>
         </div>
 
-        <div className="controls">
-          <button
-            className="btn"
-            disabled={storedMovie}
-            onClick={() => addMovieToWatchlist(movie)}
-          >
-            Add to Watchlist
-          </button>
-          <button
-            className="btn"
-            disabled={storedMovieWatched}
-            onClick={() => addMovieToWatched(movie)}
-          >
-            Add to Watched
-          </button>
-        </div>
+        {watchlist.length > 0 ? (
+          <div className="movie-grid">
+            {watchlist.map((movie) => (
+              <MovieCard movie={movie} key={movie.id} type="watchlist" />
+            ))}
+          </div>
+        ) : (
+          <h2 className="no-movies">Listenizde Film Yok...</h2>
+        )}
       </div>
     </div>
   );
 };
 
-export default ResultCart;
+export default Watchlist;
