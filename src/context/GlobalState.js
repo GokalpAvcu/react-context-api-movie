@@ -17,7 +17,7 @@ export const GlobalProvider = (props) => {
       localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
       localStorage.setItem("watched", JSON.stringify(state.watched));
     }, [state]);
-  
+    
     const addMovieToWatchlist = (movie) => {
       dispatch({ type: "ADD_MOVIE_TO_WATCHLIST", payload: movie });
     };
