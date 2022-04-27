@@ -4,10 +4,10 @@ import "./lib/fontawesome/css/all.min.css";
 import Header from "./Components/Header.jsx";
 import Watchlist from "./Components/Watchlist";
 import Watched from "./Components/Watched";
-import ResultCart from "./Components/ResultCart";
+//import ResultCart from "./Components/ResultCart";
 import Add from "./Components/Add";
-import MovieCard from "./Components/MovieCard";
-import MovieControls from "./Components/MovieControls";
+//import MovieCard from "./Components/MovieCard";
+//import MovieControls from "./Components/MovieControls";
 import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
@@ -26,3 +26,4 @@ function App() {
 }
 
 export default App;
+
